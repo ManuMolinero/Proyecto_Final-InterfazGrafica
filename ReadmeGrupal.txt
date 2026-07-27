@@ -100,7 +100,7 @@ Estas mejoras permiten conservar la información generada por las simulaciones y
 Durante el desarrollo del proyecto se utilizaron herramientas de Inteligencia Artificial como apoyo para resolver dudas técnicas, comprender conceptos y mejorar determinadas implementaciones.
 
 ## ChatGPT:
-- ...
+- https://chatgpt.com/c/6a668e46-0920-83e9-a787-84717e19c7fe
 
 - https://chatgpt.com/c/69ffa700-3878-83e9-a1a5-21d1641d900f
 
@@ -108,10 +108,9 @@ Durante el desarrollo del proyecto se utilizaron herramientas de Inteligencia Ar
 - https://claude.ai/chat/9477937f-3de1-48e9-a495-9767d8f6cf46
 
 # Repositorio:
-GitHub: 
+GitHub: https://github.com/ManuMolinero/Proyecto_Final-InterfazGrafica.git
 
-# Mejoras futuras
-
+# Mejoras futuras:
 Aunque el proyecto cumple con los objetivos planteados, existen funcionalidades que podrían incorporarse en futuras versiones y que ya deje armadas tanto en figma como en NetBeans una vista, por ejemplo:
 - Exportación de reportes en PDF.
 
@@ -120,6 +119,7 @@ Aunque el proyecto cumple con los objetivos planteados, existen funcionalidades 
 Este proyecto permitió aplicar e integrar los conocimientos adquiridos durante la cursada de Interfaz Gráfica.
 
 Las mejoras desarrolladas para el examen final ampliaron las capacidades de la aplicación, incorporando persistencia mediante SQLite, gestión de reportes, historial de simulaciones, búsqueda, filtrado y exportación de datos, logrando una aplicación más completa, organizada y preparada para futuras ampliaciones.
+
 
 VIDEO_ 1 Y 2 Instacia Evaluativa:
 https://drive.google.com/drive/folders/1A9GxJIoVLE6qyRDYI4ZzXYU1i6QfSff7
