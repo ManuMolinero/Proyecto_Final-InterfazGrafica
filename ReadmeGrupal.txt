@@ -107,9 +107,6 @@ Durante el desarrollo del proyecto se utilizaron herramientas de Inteligencia Ar
 ## Claude:
 - https://claude.ai/chat/9477937f-3de1-48e9-a495-9767d8f6cf46
 
-# Repositorio:
-GitHub: https://github.com/ManuMolinero/Proyecto_Final-InterfazGrafica.git
-
 # Mejoras futuras:
 Aunque el proyecto cumple con los objetivos planteados, existen funcionalidades que podrían incorporarse en futuras versiones y que ya deje armadas tanto en figma como en NetBeans una vista, por ejemplo:
 - Exportación de reportes en PDF.
