@@ -6,15 +6,52 @@ import parcial1.modelo.Clima;
 
 public class PantallaSimulador extends javax.swing.JFrame {
 
+    private javax.swing.JButton btnReportes;
     public PantallaSimulador() {
-        initComponents();
-        
-        // Llenar el ComboBox del clima
-        cmbClima.setModel(new javax.swing.DefaultComboBoxModel<>(Clima.values()));
-        
-        // Centrar ventana
-        setLocationRelativeTo(null);
-    }
+    initComponents();
+
+    // Llenar el ComboBox del clima
+    cmbClima.setModel(
+            new javax.swing.DefaultComboBoxModel<>(Clima.values())
+    );
+
+    // Crear botón de reportes
+    btnReportes = new javax.swing.JButton();
+
+    btnReportes.setBackground(
+            new java.awt.Color(139, 92, 246)
+    );
+
+    btnReportes.setFont(
+            new java.awt.Font("SansSerif", 1, 13)
+    );
+
+    btnReportes.setText("Simulaciones Guardadas 📊");
+    btnReportes.setFocusPainted(false);
+
+    btnReportes.setPreferredSize(
+            new java.awt.Dimension(210, 35)
+    );
+
+    btnReportes.addActionListener(e -> {
+        SimulacionesGuardadas ventanaReportes =
+                new SimulacionesGuardadas();
+
+        ventanaReportes.setVisible(true);
+    });
+
+    buttonsPanel.add(btnReportes);
+
+    // Actualizar el panel después de agregar el botón
+    buttonsPanel.revalidate();
+    buttonsPanel.repaint();
+    
+    setMinimumSize(new java.awt.Dimension(760, 450));
+    setSize(760, 450);
+
+    // Centrar ventana
+    setLocationRelativeTo(null);
+}
 
     /**
      * This method is called from within the constructor to initialize the form.

@@ -17,6 +17,12 @@ import parcial1.dao.EcosistemaDAOImpl;
 import parcial1.vista.PantallaSimulador;
 import parcial1.vista.EcosistemaGridPanel;
 import parcial1.vista.PanelReporte;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import parcial1.dao.ReporteDAO;
+import parcial1.dao.ReporteDAOImpl;
+import parcial1.modelo.ReporteSimulacion;
+
 
 public class SimuladorController implements ActionListener {
 
@@ -24,6 +30,7 @@ public class SimuladorController implements ActionListener {
     private PantallaSimulador configVista;
     private EcosistemaGridPanel simVista;
     private EcosistemaDAO dao;
+    private final ReporteDAO reporteDAO = new ReporteDAOImpl();
     private Timer timerAuto;
     private boolean simIniciada = false;
 
@@ -372,17 +379,75 @@ public class SimuladorController implements ActionListener {
     }
 
     private void mostrarReporteFinal(String causa) {
-        timerAuto.stop();
-        
-        PanelReporte panelReporte = new PanelReporte(modelo, causa);
-        panelReporte.btnCerrar.addActionListener(new java.awt.event.ActionListener() {
-            @Override
-            public void actionPerformed(java.awt.event.ActionEvent e) {
-                panelReporte.dispose();
-            }
-        });
-        panelReporte.setVisible(true);
+    timerAuto.stop();
+
+    guardarReporteFinal(causa);
+
+    PanelReporte panelReporte = new PanelReporte(modelo, causa);
+
+    panelReporte.btnCerrar.addActionListener(new java.awt.event.ActionListener() {
+        @Override
+        public void actionPerformed(java.awt.event.ActionEvent e) {
+            panelReporte.dispose();
+        }
+    });
+
+    panelReporte.setVisible(true);
+}
+    
+private void guardarReporteFinal(String causa) {
+
+    long plantasVivas = modelo.getPlantas()
+            .stream()
+            .filter(Planta::isViva)
+            .count();
+
+    long conejosVivos = modelo.getConejos()
+            .stream()
+            .filter(Conejo::isViva)
+            .count();
+
+    long lobosVivos = modelo.getLobos()
+            .stream()
+            .filter(Lobo::isViva)
+            .count();
+
+    String resultado;
+
+    if (plantasVivas == 0) {
+        resultado = "Sin plantas";
+    } else if (conejosVivos == 0) {
+        resultado = "Sin conejos";
+    } else if (lobosVivos == 0) {
+        resultado = "Sin lobos";
+    } else if (modelo.ecosistemaColapsado()) {
+        resultado = "Colapso";
+    } else {
+        resultado = "Estable";
     }
+
+    String fecha = LocalDateTime.now().format(
+            DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")
+    );
+
+    String nombre = "Simulación " + fecha;
+
+    ReporteSimulacion reporte = new ReporteSimulacion(
+            nombre,
+            fecha,
+            (int) plantasVivas,
+            (int) conejosVivos,
+            (int) lobosVivos,
+            modelo.getTurnoActual(),
+            resultado
+    );
+
+    reporteDAO.guardar(reporte);
+
+    System.out.println(
+            "Reporte final guardado. Causa: " + causa
+    );
+}    
 
     private void cargarPartida() {
         Ecosistema ecoCargado = dao.cargarEstado();

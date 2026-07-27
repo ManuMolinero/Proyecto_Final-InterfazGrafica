@@ -16,10 +16,18 @@ import parcial1.modelo.Lobo;
 public class PanelReporte extends javax.swing.JFrame {
 
     public PanelReporte(Ecosistema eco, String causaFin) {
-        initComponents();
-        cargarDatos(eco, causaFin);
-        setLocationRelativeTo(null);
-    }
+    initComponents();
+    cargarDatos(eco, causaFin);
+    
+    btnCerrar.addActionListener(e -> {
+    PantallaSimulador menu = new PantallaSimulador();
+    menu.setVisible(true);
+    dispose();
+});
+
+    setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
+    setLocationRelativeTo(null);
+}
 
     private void cargarDatos(Ecosistema eco, String causaFin) {
         if (eco == null) return;
@@ -231,7 +239,7 @@ public class PanelReporte extends javax.swing.JFrame {
 
         pnlResumen.add(pnlCuerpoResumen, java.awt.BorderLayout.CENTER);
 
-        tabbedPane.addTab("Resumen General 📋", pnlResumen);
+        tabbedPane.addTab(null, pnlResumen);
 
         pnlEstadisticas.setBackground(new java.awt.Color(255, 255, 255));
         pnlEstadisticas.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 15, 15, 15));
@@ -259,15 +267,15 @@ public class PanelReporte extends javax.swing.JFrame {
 
         pnlEstadisticas.add(pnlExtremos, java.awt.BorderLayout.SOUTH);
 
-        tabbedPane.addTab("Historial y Extremos 📈", pnlEstadisticas);
+        tabbedPane.addTab(null, pnlEstadisticas);
 
         pnlMain.add(tabbedPane, java.awt.BorderLayout.CENTER);
 
         pnlBoton.setBackground(new java.awt.Color(243, 244, 246));
-        pnlBoton.setLayout(new java.awt.FlowLayout());
 
         btnCerrar.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         btnCerrar.setText("Cerrar y Volver al Menú 🔄");
+        btnCerrar.addActionListener(this::btnCerrarActionPerformed);
         pnlBoton.add(btnCerrar);
 
         pnlMain.add(pnlBoton, java.awt.BorderLayout.SOUTH);
@@ -286,6 +294,10 @@ public class PanelReporte extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCerrarActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCerrar;

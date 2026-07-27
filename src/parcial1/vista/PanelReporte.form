@@ -3,7 +3,7 @@
 <Form version="1.8" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="2"/>
-    <Property name="title" type="java.lang.String" value="Reporte Final del Ecosistema 📊" containsInvalidXMLChars="true"/>
+    <Property name="title" type="java.lang.String" value="Reporte Final del Ecosistema \ud83d\udcca" containsInvalidXMLChars="true"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -77,7 +77,9 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabTitle="Resumen General 📋"/>
+                  <JTabbedPaneConstraints>
+                    <Property name="tabTitle" type="java.lang.String" value="null"/>
+                  </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
 
@@ -93,7 +95,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="27" green="18" red="11" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Resumen de Simulación"/>
+                    <Property name="text" type="java.lang.String" value="Resumen de Simulaci&#xf3;n"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
@@ -125,7 +127,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="SansSerif" size="12" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Causa de finalización:"/>
+                        <Property name="text" type="java.lang.String" value="Causa de finalizaci&#xf3;n:"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="lblCausaVal">
@@ -173,7 +175,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="SansSerif" size="12" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Planta más longeva:"/>
+                        <Property name="text" type="java.lang.String" value="Planta m&#xe1;s longeva:"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="lblPlantaVal">
@@ -189,7 +191,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="SansSerif" size="12" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Conejo más longevo:"/>
+                        <Property name="text" type="java.lang.String" value="Conejo m&#xe1;s longevo:"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="lblConejoVal">
@@ -205,7 +207,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="SansSerif" size="12" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Lobo más longevo:"/>
+                        <Property name="text" type="java.lang.String" value="Lobo m&#xe1;s longevo:"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="lblLoboVal">
@@ -221,7 +223,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="SansSerif" size="12" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Lobo más cazador:"/>
+                        <Property name="text" type="java.lang.String" value="Lobo m&#xe1;s cazador:"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="lblCazadorVal">
@@ -237,7 +239,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="SansSerif" size="12" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Estadísticas totales (Nac/Muer):"/>
+                        <Property name="text" type="java.lang.String" value="Estad&#xed;sticas totales (Nac/Muer):"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="lblStatsVal">
@@ -265,7 +267,9 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabTitle="Historial y Extremos 📈"/>
+                  <JTabbedPaneConstraints>
+                    <Property name="tabTitle" type="java.lang.String" value="null"/>
+                  </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
 
@@ -293,7 +297,7 @@
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                        <TitledBorder title="Mínimos y Máximos Históricos"/>
+                        <TitledBorder title="M&#xed;nimos y M&#xe1;ximos Hist&#xf3;ricos"/>
                       </Border>
                     </Property>
                   </Properties>
@@ -337,7 +341,6 @@
                 </Container>
               </SubComponents>
             </Container>
-
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="pnlBoton">
@@ -359,8 +362,11 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="SansSerif" size="12" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Cerrar y Volver al Menú 🔄" containsInvalidXMLChars="true"/>
+                <Property name="text" type="java.lang.String" value="Cerrar y Volver al Men&#xfa; \ud83d\udd04" containsInvalidXMLChars="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCerrarActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

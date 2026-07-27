@@ -4,9 +4,11 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import parcial1.controlador.SimuladorController;
 import parcial1.vista.PantallaSimulador;
+import parcial1.dao.InicializadorDB;
 
 public class MainApp {
     public static void main(String[] args) {
+        InicializadorDB.inicializar();
         // Intentar usar el Look and Feel del sistema para una apariencia más moderna y premium
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
